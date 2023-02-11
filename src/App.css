@@ -1,38 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	font-family: 'Ubuntu';
+	padding: 0px;
+	font-family: 'Ubuntu', sans-serif;
+	background: linear-gradient(180deg, #4abad5 0%, #1d6796 100%);
+}
+
 .App {
-  text-align: center;
+	text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-principal-container {
+	display: flex;
+	justify-content: center;
+	column-gap: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-left-container {
+	width: 300px;
+	background-color: #4cb8d4;
+	padding: 30px;
+	margin-top: 45px;
+	max-height: 700px;
+	border-radius: 5px;
+	border: 3px solid #db063a;
+	box-shadow: inset 0px 0px 4px 1px #e7f2fc;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+	font-size: 20px;
+	font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-right-container {
+	background-color: #e7f2fc;
+	border-radius: 10px;
+	box-shadow: 0px 0px 20px 1px #ade8ff;
+	padding: 10px 50px 10px 50px;
+	margin-top: 45px;
+	max-height: 700px;
 }

@@ -1,0 +1,10 @@
+.list-display-of-right ul {
+	padding-inline-start: 0px;
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	max-height: 390px;
+	overflow-y: scroll;
+}

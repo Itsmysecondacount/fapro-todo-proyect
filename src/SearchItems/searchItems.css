@@ -1,0 +1,15 @@
+.header-of-right {
+	margin-top: 45px !important;
+	background-color: #4cb8d4;
+	margin: 10px 10px 10px 10px;
+	position: relative;
+	box-shadow: 0px 0px 10px 1px #005886;
+	padding: 30px 30px 10px 30px;
+	width: 512px;
+}
+
+.header-of-right h2 {
+	margin-bottom: 40px;
+	font-weight: 400;
+	font-style: italic;
+}

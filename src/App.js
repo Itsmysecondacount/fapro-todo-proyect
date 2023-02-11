@@ -1,25 +1,53 @@
-import logo from './logo.svg';
 import './App.css';
+import './GeneralStyles.css';
+import { AddTodoItem } from './AddTodoItem';
+import { SearchItems } from './SearchItems';
+import { ListItems } from './ListItems';
+import { useJsonServer } from './useJsonServer';
+import {} from './';
+import { LoadingC } from './Loading';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const {
+		searchedTodos,
+		loading,
+		searchValue,
+		error,
+		createData,
+		updateData,
+		deleteData,
+		setSearchValue,
+	} = useJsonServer();
+
+	return (
+		<div className="App-principal-container">
+			<div className="App-left-container general-container">
+				<AddTodoItem
+					createData={createData}
+					setSearchValue={setSearchValue}
+					error={error}
+				/>
+			</div>
+			<div className="App-right-container">
+				<SearchItems
+					searchValue={searchValue}
+					setSearchValue={setSearchValue}
+					error={error}
+				/>
+				{!loading ? (
+					<ListItems
+						data={searchedTodos}
+						deleteData={deleteData}
+						updateData={updateData}
+						setSearchValue={setSearchValue}
+						error={error}
+					/>
+				) : (
+					<LoadingC />
+				)}
+			</div>
+		</div>
+	);
 }
 
 export default App;
