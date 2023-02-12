@@ -14,8 +14,7 @@ export const ListItems = ({ data, deleteData, updateData, setSearchValue, error 
 						<>
 							{data.map((el) => (
 								<TodoItem
-									key={el.id}
-									id={el.id}
+									key={el.title}
 									title={el.title}
 									description={el.description}
 									date={el.dateCreation}

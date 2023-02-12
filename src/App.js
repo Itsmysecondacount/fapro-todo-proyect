@@ -3,9 +3,9 @@ import './GeneralStyles.css';
 import { AddTodoItem } from './AddTodoItem';
 import { SearchItems } from './SearchItems';
 import { ListItems } from './ListItems';
-import { useJsonServer } from './useJsonServer';
-import {} from './';
+// import { useJsonServer } from './useJsonServer';
 import { LoadingC } from './Loading';
+import { useLocalStorage } from './useLocalStorage';
 
 function App() {
 	const {
@@ -13,11 +13,11 @@ function App() {
 		loading,
 		searchValue,
 		error,
-		createData,
 		updateData,
+		createData,
 		deleteData,
 		setSearchValue,
-	} = useJsonServer();
+	} = useLocalStorage();
 
 	return (
 		<div className="App-principal-container">

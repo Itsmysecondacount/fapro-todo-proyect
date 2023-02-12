@@ -5,7 +5,6 @@ import { AiFillEdit } from 'react-icons/ai';
 import { MdDelete } from 'react-icons/md';
 
 export const TodoItem = ({
-	id,
 	title,
 	description,
 	date,
@@ -30,7 +29,7 @@ export const TodoItem = ({
 						<span onClick={() => changeModal()}>
 							<AiFillEdit size={'30px'} color={''} className="edit-Icon" />
 						</span>
-						<span onClick={() => deleteData(id)}>
+						<span onClick={() => deleteData(title)}>
 							<MdDelete size={'30px'} color={''} className="delete-Icon" />
 						</span>
 						<p>{date}</p>
@@ -40,7 +39,6 @@ export const TodoItem = ({
 			{!!modal ? (
 				<Modal
 					changeModal={changeModal}
-					id={id}
 					title={title}
 					description={description}
 					updateData={updateData}

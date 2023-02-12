@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './modal.css';
 
-export const Modal = ({ id, title, description, changeModal, updateData }) => {
+export const Modal = ({ title, description, changeModal, updateData }) => {
 	const [firstInput, setFirstInput] = useState(title);
 	const [secondInput, setSecondInput] = useState(description);
 
@@ -11,7 +11,7 @@ export const Modal = ({ id, title, description, changeModal, updateData }) => {
 		const [month, day, year] = [date.getMonth(), date.getDate(), date.getFullYear()];
 		const [hour, minutes] = [date.getHours(), date.getMinutes()];
 		let newData = {
-			id: id,
+			prevTitle: title,
 			title: firstInput,
 			description: secondInput,
 			dateCreation:

@@ -7,22 +7,9 @@ export const AddTodoItem = ({ createData, setSearchValue }) => {
 	const [description, setDescription] = useState('');
 
 	const buttonForCreateData = () => {
-		const date = new Date();
-		const [month, day, year] = [date.getMonth(), date.getDate(), date.getFullYear()];
-		const [hour, minutes] = [date.getHours(), date.getMinutes()];
 		let newData = {
 			title: title,
 			description: description,
-			dateCreation:
-				hour +
-				':' +
-				minutes +
-				'		' +
-				month.toString() +
-				'/' +
-				day.toString() +
-				'/' +
-				year.toString(),
 		};
 		createData(newData);
 		setTitle('');
